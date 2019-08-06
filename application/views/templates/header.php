@@ -7,9 +7,9 @@
 <title><?= $title; ?></title>
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>vendor/styles/framework.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>vendor/fonts/css/fontawesome-all.min.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>vendor/styles/style.css">    
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/styles/framework.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/fonts/css/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/styles/style.css">    
 </head>
     
 <body class="theme-light" data-highlight="blue2">
