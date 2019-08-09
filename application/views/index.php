@@ -87,14 +87,6 @@
         <!-- <div class="divider divider-margins"></div> -->          
     </div>
 
-    <div id="footer-menu" class="footer-menu-3-icons">
-        <a href="<?= base_url('home') ?>" class="active-menu link"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="<?= base_url('lists') ?>" class="link"><i class="far fa-list-alt"></i><span>List</span></a>
-        <a href="<?= base_url('profile') ?>" class="link"><i class="fas fa-user-circle"></i><span>Profile</span></a>
-        <div class="clear"></div>
-    </div>
-
 <!-- </div> -->
 
-    
     
