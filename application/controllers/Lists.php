@@ -15,7 +15,7 @@ class Lists extends CI_Controller
         $data['title'] = 'List';
         
         $this->load->view('templates/header', $data);
-        $this->load->view('list');
+        $this->load->view('list/index');
         $this->load->view('templates/footer');
     }
 

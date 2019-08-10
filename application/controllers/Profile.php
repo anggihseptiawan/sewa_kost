@@ -9,7 +9,7 @@ class Profile extends CI_Controller
         $data['title'] = 'Profile';
         
         $this->load->view('templates/header', $data);
-        $this->load->view('profile');
+        $this->load->view('profile/index');
         $this->load->view('templates/footer');
     }
 
