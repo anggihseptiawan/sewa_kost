@@ -14,7 +14,7 @@ class Post_iklan extends CI_Controller
 		$data['title'] = 'Posting iklan';
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('post_iklan');
+		$this->load->view('posting/index');
 		$this->load->view('templates/footer');
 	}
 

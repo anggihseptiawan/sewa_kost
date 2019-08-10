@@ -50,9 +50,9 @@
         </div>
         <div class="form-group">
             <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Temukan lokasi..">
+            <input type="text" class="form-control" style="border: 1px solid #71aeef !important;" placeholder="Temukan lokasi..">
             <div class="input-group-append">
-                <button type="submit" class="input-group-text"><i class="fas fa-search-location"></i></button>
+                <button type="submit" style="border: 1px solid #71aeef !important;" class="input-group-text"><i class="fas fa-search-location"></i></button>
             </div>
             </div>
         </div>

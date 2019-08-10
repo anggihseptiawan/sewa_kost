@@ -11,6 +11,24 @@ a {
 	text-decoration: none;
 }
 
+.nav-tabs .nav-link {
+	background-color: unset !important;
+}
+
+.modal-dialog {
+	margin: unset;
+}
+
+.modal-dialog-scrollable .modal-content {
+	max-height: 100% !important;
+}
+
+.modal-dialog-scrollable {
+	display: -ms-flexbox;
+	display: flex;
+	max-height: 100%;
+}
+
 main.app {
 	padding: 70px 0;
 	display: block;
@@ -29,6 +47,19 @@ main.app {
 input,
 .input-group-append button {
 	border: 1px solid #71aeef !important;
+}
+
+.form-group input {
+	border-radius: unset;
+	border-bottom: 1px solid blue;
+	border-top: unset !important;
+	border-left: unset !important;
+	border-right: unset !important;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+	box-shadow: unset !important;
 }
 
 .card .card-header i {
