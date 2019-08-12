@@ -17,23 +17,30 @@ class Register extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
-	public function register()
+	public function post_register()
 	{
 		$nama = $this->input->post("nama");
 		$email = $this->input->post("email");
 		$password = md5($this->input->post("password"));
-		$params = array("nama" => $nama, "username" => $email, "password" => $password, "created_at" => date("Y-m-d H:i:s"), "leve1" => 1);
+		$password2 = md5($this->input->post("password2"));
+		$params = array("nama" => $nama, "username" => $email, "password" => $password, "created_at" => date("Y-m-d H:i:s"), "level" => 2);
 		$where = array("username" => $email);
 		$cek = $this->register->cek($where);
-		if (empty($cek)) {
-			$insert = $this->register->register($params);
-			if ($insert > 0){
-				echo  json_encode(array('status' => true));
+		if ($password == $password2){
+			if (empty($cek)) {
+				$insert = $this->register->register($params);
+				if ($insert > 0){
+					$this->session->set_flashdata("msg", "Selamat!, Anda berhasil register. Silahkan login.");
+					redirect("auth/login");
+				}else{
+					$this->session->set_flashdata("msg", "Oops!, Anda gagal register. Silahkan ulangi.");
+				}
 			}else{
-				echo  json_encode(array('status' => false));
+				$this->session->set_flashdata("msg", "Oops!, Email yang Anda gunakan sudah terdaftar.");
 			}
 		}else{
-			echo  json_encode(array('status' => false));
+			$this->session->set_flashdata("msg", "Oops!, Konfirmasi password salah, silahkan ulangi.");
 		}
+		redirect("auth/register");
 	}
 }

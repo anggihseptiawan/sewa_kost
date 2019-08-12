@@ -19,10 +19,12 @@ class Login extends CI_Controller
 
 	public function cek()
 	{
-		$username = $this->input->post("log_username");
-		$password = md5($this->input->post("log_password"));
+		$username = $this->input->post("email");
+		$password = md5($this->input->post("password"));
+
 		$cek = $this->login->cek(array("username" => $username, "password" => $password));
-		if (!empty($cek->username)) {
+
+		if (!empty($cek)) {
 //			$data_session = array("status" => true,"user_id" => $cek->user_id, "email" => $username, "nama" => $cek->nama, "level" => $cek->level);
 			$this->session->set_userdata("status",true);
 			$this->session->set_userdata("user_id", $cek->user_id);
@@ -32,7 +34,8 @@ class Login extends CI_Controller
 
 			redirect("profile", "refresh");
 		} else {
-			redirect("login", "refresh");
+			$this->session->set_flashdata("msg", "Oops... Login salah.");
+			redirect("auth/login", "refresh");
 		}
 	}
 
@@ -40,6 +43,6 @@ class Login extends CI_Controller
 	{
 //		$this->session->sess_destroy();
 		session_destroy();
-		redirect("login", 'refresh');
+		redirect("auth/login", 'refresh');
 	}
 }

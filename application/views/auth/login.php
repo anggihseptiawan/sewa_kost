@@ -1,6 +1,7 @@
 	<div id="login">
 		<small class="text-center text-primary d-block mb-3">Silahkan login</small>
-		<form action="#" method="post">
+		<p class="text-center"><span class="badge badge-primary"><?=$this->session->flashdata("msg")?></span></p>
+		<form action="<?=base_url("auth/login/cek")?>" method="post">
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email</label>
 				<input type="email" class="form-control" name="email" id="exampleInputEmail1"

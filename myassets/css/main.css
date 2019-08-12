@@ -43,13 +43,13 @@ main.app {
 	margin-bottom: .5rem;
 }
 
-.form-group select,
-input,
+.form-group select, .form-group
+input, .form-group textarea,
 .input-group-append button {
 	border: 1px solid #71aeef !important;
 }
 
-.form-group input {
+.form-group input, .form-group select, .form-group textarea{
 	border-radius: unset;
 	border-bottom: 1px solid blue;
 	border-top: unset !important;
@@ -58,7 +58,8 @@ input,
 }
 
 .form-group input:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus{
 	box-shadow: unset !important;
 }
 

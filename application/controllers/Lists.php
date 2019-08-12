@@ -11,7 +11,7 @@ class Lists extends CI_Controller
 
 	public function index()
     {
-    	$data['kostan'] = $this->list->getList();
+    	$data['list_kost'] = $this->list->getList();
         $data['title'] = 'List';
         
         $this->load->view('templates/header', $data);
