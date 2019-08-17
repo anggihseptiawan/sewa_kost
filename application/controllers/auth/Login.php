@@ -22,10 +22,9 @@ class Login extends CI_Controller
 		$username = $this->input->post("email");
 		$password = md5($this->input->post("password"));
 
-		$cek = $this->login->cek(array("username" => $username, "password" => $password));
+		$cek = $this->login->cek(array("username" => $username, "password" => $password, "is_active" => 1));
 
 		if (!empty($cek)) {
-//			$data_session = array("status" => true,"user_id" => $cek->user_id, "email" => $username, "nama" => $cek->nama, "level" => $cek->level);
 			$this->session->set_userdata("status",true);
 			$this->session->set_userdata("user_id", $cek->user_id);
 			$this->session->set_userdata("email", $username);
@@ -41,8 +40,7 @@ class Login extends CI_Controller
 
 	public function out()
 	{
-//		$this->session->sess_destroy();
-		session_destroy();
+		$this->session->sess_destroy();
 		redirect("auth/login", 'refresh');
 	}
 }

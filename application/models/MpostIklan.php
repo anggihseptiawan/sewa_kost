@@ -23,4 +23,10 @@ class MpostIklan extends CI_Model{
 	{
 		return $this->db->get_where($this->table, $where)->row();
 	}
+
+	public function update_kost($params = array(), $where = array())
+	{
+		$this->db->where($where)->update($this->table, $params);
+		return $this->db->affected_rows();
+	}
 }

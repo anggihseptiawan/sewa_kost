@@ -53,19 +53,20 @@
 <script type="text/javascript">
     $('.edit').on('click', function () {
         var url = $(this).attr("data-urledit");
+        // alert(url);
         $.ajax({
 			url : url,
 			method : 'get',
 			dataType : 'html',
 			success : function (html) {
-
+				$(".tampil_edit").html(html);
             }
 		})
     })
 
     $('.delete').on('click', function () {
         var url = $(this).attr("data-urldelete");
-        alert(url);
+        // alert(url);
     })
 </script>
 </body>
