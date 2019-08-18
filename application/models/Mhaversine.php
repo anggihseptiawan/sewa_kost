@@ -37,7 +37,7 @@ class Mhaversine extends CI_Model
 		return $this->db->get("kostan")->result();
 	}
 
-	public function getDistanceBetween($latitude1, $longitude1, $latitude2, $longitude2, $unit = 'Mi', $id)
+	public function getDistanceBetween(float $latitude1, float $longitude1, float $latitude2, float $longitude2, $unit = 'Mi', $id)
 	{
 		$theta = $longitude1 - $longitude2;
 		$distance = (sin(deg2rad($latitude1)) * sin(deg2rad($latitude2))) + (cos(deg2rad($latitude1)) * cos(deg2rad($latitude2)) * cos(deg2rad($theta)));

@@ -7,21 +7,46 @@
 			   placeholder="Masukkan nama kost" value="<?= $value->nama_kost ?>">
 	</div>
 	<div class="form-group">
-		<label for="exampleFormControlSelect1">Tipe kost</label>
-		<select class="form-control" name="tipe_kost" id="exampleFormControlSelect1">
+		<label for="exampleFormControlSelect1" style="display: block;">Tipe kost</label>
+		<!-- <select class="form-control" name="tipe_kost" id="exampleFormControlSelect1">
 			<option value="putra" <?= $value->type_kost == 'putra' ? "selected" : "" ?> >Putra</option>
 			<option value="putri" <?= $value->type_kost == 'putri' ? "selected" : "" ?>>Putri</option>
 			<option value="campur" <?= $value->type_kost == 'campur' ? "selected" : "" ?>>Campur</option>
-		</select>
+		</select> -->
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio1" name="tipe_kost" value="putra" class="custom-control-input" <?= $value->type_kost == 'putra' ? "checked" : "" ?>>
+		  <label class="custom-control-label" for="customRadio1">Putra</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio2" value="putri" name="tipe_kost" class="custom-control-input" <?= $value->type_kost == 'putri' ? "checked" : "" ?>>
+		  <label class="custom-control-label" for="customRadio2">Putri</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio3" value="campur" name="tipe_kost" class="custom-control-input" <?= $value->type_kost == 'campur' ? "checked" : "" ?>>
+		  <label class="custom-control-label" for="customRadio3">Campur</label>
+		</div>
 	</div>
 	<div class="form-group">
-		<label for="exampleFormControlSelect2">Tipe bayar</label>
-		<select class="form-control" name="tipe_bayar" id="exampleFormControlSelect2">
+		<label for="exampleFormControlSelect2" style="display: block;">Tipe bayar</label>
+		<!-- <select class="form-control" name="tipe_bayar" id="exampleFormControlSelect2">
 			<option value="1bulana" <?= $value->type_bayar_kost == '1bulana' ? "selected" : "" ?> >Per Bulanan</option>
 			<option value="3bulana" <?= $value->type_bayar_kost == '3bulana' ? "selected" : "" ?> >per 3 Bulanan
 			</option>
 			<option value="1tahun" <?= $value->type_bayar_kost == '1tahun' ? "selected" : "" ?> >Per Tahunan</option>
-		</select>
+		</select> -->
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio4" name="tipe_bayar" value="1bulan" class="custom-control-input" <?= $value->type_bayar_kost == '1bulan' ? "checked" : "" ?>>
+		  <label class="custom-control-label" for="customRadio4">1Bulan</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio5" value="3bulan" name="tipe_bayar" class="custom-control-input" <?= $value->type_bayar_kost == '3bulan' ? "checked" : "" ?>>
+		  <label class="custom-control-label" for="customRadio5">3Bulan</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio6" value="1tahun" name="tipe_bayar" class="custom-control-input" <?= $value->type_bayar_kost == '1tahun' ? "checked" : "" ?>>
+		  <label class="custom-control-label" for="customRadio6">1Tahun</label>
+		</div>
+
 	</div>
 	<div class="form-group">
 		<label for="alamat">Alamat</label>
@@ -92,7 +117,7 @@
 	<div class="form-group">
 		<label for="exampleFormControlTextarea1">Deskripsi</label>
 		<textarea class="form-control" id="exampleFormControlTextarea1" name="deskripsi"
-				  rows="3" placeholder="Tulis deskripsi"></textarea>
+				  rows="3" placeholder="Tulis deskripsi"><?= $value->deskripsi_kost ?></textarea>
 	</div>
 	<div class="form-group">
 		<button type="submit" class="btn btn-primary btn-block rounded-pill">Update</button>

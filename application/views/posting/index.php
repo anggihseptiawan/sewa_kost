@@ -23,20 +23,46 @@
 					   placeholder="Masukkan nama kost">
 			</div>
 			<div class="form-group">
-				<label for="exampleFormControlSelect1">Tipe kost</label>
-				<select class="form-control" name="_tipe_kost" id="exampleFormControlSelect1">
+				<label for="exampleFormControlSelect1" style="display: block;">Tipe kost</label>
+				<!-- <select class="form-control" name="_tipe_kost" id="exampleFormControlSelect1">
 					<option value="putra">Putra</option>
 					<option value="putri">Putri</option>
 					<option value="campur">Campur</option>
-				</select>
+				</select> -->
+
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio1" name="_tipe_kost" value="putra" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio1">Putra</label>
+				</div>
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio2" value="putri" name="_tipe_kost" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio2">Putri</label>
+				</div>
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio3" value="campur" name="_tipe_kost" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio3">Campur</label>
+				</div>
+
 			</div>
 			<div class="form-group">
-				<label for="exampleFormControlSelect2">Tipe bayar</label>
-				<select class="form-control" name="_tipe_bayar" id="exampleFormControlSelect2">
+				<label for="exampleFormControlSelect2" style="display: block;">Tipe bayar</label>
+				<!-- <select class="form-control" name="_tipe_bayar" id="exampleFormControlSelect2">
 					<option value="1bulana">Per Bulanan</option>
 					<option value="3bulana">per 3 Bulanan</option>
 					<option value="1tahun">Per Tahunan</option>
-				</select>
+				</select> -->
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio4" name="_tipe_bayar" value="1bulan" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio4">1Bulan</label>
+				</div>
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio5" value="3bulan" name="_tipe_bayar" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio5">3Bulan</label>
+				</div>
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio6" value="1tahun" name="_tipe_bayar" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio6">1Tahun</label>
+				</div>
 			</div>
 			<div class="form-group">
 				<label for="alamat">Alamat</label>
@@ -103,7 +129,7 @@
 		<div class="accordion" id="accordionExample">
 			<?php foreach ($data_kost as $key => $value): ?>
 				<div class="card">
-					<div class="card-header" id="headingOne<?= $key ?>">
+					<div class="card-header" id="headingOne<?= $key ?>" style="padding: unset;">
 						<h2 class="mb-0">
 							<button class="btn btn-link" type="button" data-toggle="collapse"
 									data-target="#collapseOne<?= $key ?>"
@@ -112,10 +138,10 @@
 							</button>
 							<a class="far fa-fw fa-minus-square float-right text-danger ml-2 delete"
 							   href="<?= base_url("post_iklan/delete/$value->kostan_id") ?>"
-							   ></a>
+							   style="margin-top: 5px;"></a>
 							<a data-value="value"
 							   href="<?= base_url("post_iklan/edit/$value->kostan_id") ?>"
-							   class="far fa-fw fa-edit float-right text-primary edit"></a>
+							   class="far fa-fw fa-edit float-right text-primary edit" style="margin-top: 5px;"></a>
 						</h2>
 					</div>
 

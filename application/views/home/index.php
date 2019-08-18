@@ -3,32 +3,69 @@
 
 <form action="<?=base_url("home/search")?>" method="post">
 	<div class="form-group">
-		<label for="exampleFormControlSelect1"><i class="fas fa-fw fa-male text-primary" style="font-size: 18px;"></i>
+		<label for="exampleFormControlSelect1" class="d-block"><i class="fas fa-fw fa-male text-primary" style="font-size: 18px;"></i>
 			Tipe kost</label>
-		<select class="form-control" name="tipe_kost" id="exampleFormControlSelect1">
+		<!-- <select class="form-control" name="tipe_kost" id="exampleFormControlSelect1">
 			<option value="">---</option>
 			<option value="putra">Putra</option>
 			<option value="putri">Putri</option>
 			<option value="campur">Campur</option>
-		</select>
+		</select> -->
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio1" name="tipe_kost" value="putra" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio1">Putra</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio2" value="putri" name="tipe_kost" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio2">Putri</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio3" value="campur" name="tipe_kost" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio3">Campur</label>
+		</div>
 	</div>
+	
 	<div class="form-group">
-		<label for="exampleFormControlSelect2"><i class="far fa-fw fa-calendar-alt text-primary"></i> Tipe bayar</label>
-		<select class="form-control" name="tipe_bayar" id="exampleFormControlSelect2">
+		<label for="exampleFormControlSelect2 d-block" style="display: block;"><i class="far fa-fw fa-calendar-alt text-primary"></i> Tipe bayar</label>
+		<!-- <select class="form-control" name="tipe_bayar" id="exampleFormControlSelect2">
 			<option value="">---</option>
 			<option value="1bulan">per 1 Bulanan</option>
 			<option value="3bulan">per 3 Bulan</option>
 			<option value="1tahun">per 1 Tahunan</option>
-		</select>
+		</select> -->
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio4" name="tipe_bayar" value="1bulan" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio4">1Bulan</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio5" value="3bulan" name="tipe_bayar" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio5">3Bulan</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio6" value="1tahun" name="tipe_bayar" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio6">1Tahun</label>
+		</div>
 	</div>
 	<div class="form-group">
-		<label for="exampleFormControlSelect2"><i class="fas fa-fw fa-hand-holding-usd text-primary"></i> Harga</label>
-		<select class="form-control" name="harga" id="exampleFormControlSelect2">
+		<label for="exampleFormControlSelect2" style="display: block;"><i class="fas fa-fw fa-hand-holding-usd text-primary"></i> Harga</label>
+		<!-- <select class="form-control" name="harga" id="exampleFormControlSelect2">
 			<option value="">---</option>
 			<option value="murah">Murah</option>
 			<option value="sedang">Sedang</option>
 			<option value="mahal">Mahal</option>
-		</select>
+		</select> -->
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio7" name="harga" value="murah" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio7">Murah</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio8" value="sedang" name="harga" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio8">Sedang</label>
+		</div>
+		<div class="custom-control custom-radio d-inline">
+		  <input type="radio" id="customRadio9" value="mahal" name="harga" class="custom-control-input">
+		  <label class="custom-control-label" for="customRadio9">Mahal</label>
+		</div>
 	</div>
 	<div class="form-group">
 		<p><i class="fas fa-fw fa-bed text-primary"></i> Fasilitas</p>
