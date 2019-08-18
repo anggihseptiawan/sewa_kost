@@ -11,18 +11,27 @@
 			<option value="putri">Putri</option>
 			<option value="campur">Campur</option>
 		</select> -->
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio1" name="tipe_kost" value="putra" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio1">Putra</label>
+		<div class="row" style="height: 24px;">
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio1" name="tipe_kost" value="putra" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio1">Putra</label>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio2" value="putri" name="tipe_kost" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio2">Putri</label>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio3" value="campur" name="tipe_kost" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio3">Campur</label>
+				</div>
+			</div>
 		</div>
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio2" value="putri" name="tipe_kost" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio2">Putri</label>
-		</div>
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio3" value="campur" name="tipe_kost" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio3">Campur</label>
-		</div>
+		
 	</div>
 	
 	<div class="form-group">
@@ -33,18 +42,27 @@
 			<option value="3bulan">per 3 Bulan</option>
 			<option value="1tahun">per 1 Tahunan</option>
 		</select> -->
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio4" name="tipe_bayar" value="1bulan" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio4">1Bulan</label>
+		<div class="row">
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio4" name="tipe_bayar" value="1bulan" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio4">1Bulan</label>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio5" value="3bulan" name="tipe_bayar" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio5">3Bulan</label>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio6" value="1tahun" name="tipe_bayar" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio6">1Tahun</label>
+				</div>
+			</div>
 		</div>
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio5" value="3bulan" name="tipe_bayar" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio5">3Bulan</label>
-		</div>
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio6" value="1tahun" name="tipe_bayar" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio6">1Tahun</label>
-		</div>
+		
 	</div>
 	<div class="form-group">
 		<label for="exampleFormControlSelect2" style="display: block;"><i class="fas fa-fw fa-hand-holding-usd text-primary"></i> Harga</label>
@@ -54,18 +72,27 @@
 			<option value="sedang">Sedang</option>
 			<option value="mahal">Mahal</option>
 		</select> -->
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio7" name="harga" value="murah" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio7">Murah</label>
-		</div>
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio8" value="sedang" name="harga" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio8">Sedang</label>
-		</div>
-		<div class="custom-control custom-radio d-inline">
-		  <input type="radio" id="customRadio9" value="mahal" name="harga" class="custom-control-input">
-		  <label class="custom-control-label" for="customRadio9">Mahal</label>
-		</div>
+		<div class="row">
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio7" name="harga" value="murah" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio7">Murah</label>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio8" value="sedang" name="harga" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio8">Sedang</label>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="custom-control custom-radio d-inline">
+				  <input type="radio" id="customRadio9" value="mahal" name="harga" class="custom-control-input">
+				  <label class="custom-control-label" for="customRadio9">Mahal</label>
+				</div>
+			</div>
+		</div>		
+		
 	</div>
 	<div class="form-group">
 		<p><i class="fas fa-fw fa-bed text-primary"></i> Fasilitas</p>
